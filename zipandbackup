@@ -1,0 +1,16 @@
+
+import os
+import time
+#source files/folders
+  source = ['C:\\test', 'C:\\test2']
+#target folder
+  target_dir = 'C:\\Backup'
+#archive name
+  target = target_dir + os.sep + time.strftime('%Y%m%d%H%M%S') + '.zip'
+#use tar to add files in the archive
+  zip_command = "tar -cf {0} {1}".format(target,' '.join(source))
+#launch the command and check a success
+  if os.system(zip_command) == 0:
+     print("success")
+  else:
+     print("not")
