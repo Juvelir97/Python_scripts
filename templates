@@ -1,0 +1,21 @@
+# Copy file
+
+import shutil
+import os
+shutil.copy('hello.py', 'welcome.py')
+print("Copy Successful")
+
+# Delete
+
+import os
+os.remove('sample.txt')
+print("File removed successfully")
+os.rmdir('work1')
+print("Directory removed successfully")
+
+#Zip/Unzip
+import shutil
+shutil.make_archive('work', 'zip', 'work/')
+
+import shutil
+shutil.unpack_archive('work1.zip')
